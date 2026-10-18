@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="Jalan Cita — Agar Sekolah Bukan Ujung Jalan">
+  <rect width="1200" height="630" fill="#F4EEE3"/>
+  <g stroke="#8A8174" stroke-width="1" opacity="0.18" fill="none">
+    <path d="M-20 120 C 200 40 420 220 640 150 880 74 1080 210 1240 130"/>
+    <path d="M-20 200 C 220 130 430 300 660 232 900 160 1090 292 1240 214"/>
+    <path d="M-20 470 C 210 400 440 560 680 494 910 430 1100 548 1240 480"/>
+    <path d="M-20 550 C 220 480 430 640 690 572 920 512 1110 620 1240 556"/>
+  </g>
+  <path d="M300 640 C 420 520 250 400 360 300 470 200 360 120 430 60"
+        fill="none" stroke="#2F5D46" stroke-width="10" stroke-linecap="round" stroke-dasharray="2 26"/>
+  <circle cx="300" cy="600" r="14" fill="#C0532F"/>
+  <circle cx="430" cy="60" r="22" fill="none" stroke="#C0532F" stroke-width="10"/>
+  <text x="520" y="320" font-family="Georgia, 'Times New Roman', serif" font-size="96" fill="#1F2A24">Jalan Cita</text>
+  <text x="524" y="400" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-size="46" fill="#2F5D46">Agar Sekolah Bukan Ujung Jalan</text>
+  <text x="524" y="470" font-family="Verdana, Arial, sans-serif" font-size="26" fill="#8A8174">Ide lomba inovasi desa — pendampingan pendidikan anak</text>
+</svg>

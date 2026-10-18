@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Jalan Cita">
+  <rect width="64" height="64" rx="10" fill="#F4EEE3"/>
+  <path d="M18 54C30 46 22 30 32 22 42 14 46 26 34 18" fill="none" stroke="#2F5D46" stroke-width="4" stroke-linecap="round" stroke-dasharray="1 9"/>
+  <circle cx="18" cy="54" r="4.5" fill="#C0532F"/>
+  <circle cx="32" cy="22" r="3" fill="#1F2A24"/>
+  <circle cx="34" cy="18" r="6" fill="none" stroke="#C0532F" stroke-width="3"/>
+</svg>

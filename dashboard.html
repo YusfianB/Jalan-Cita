@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Demo Dashboard — Aplikasi Jalan Cita</title>
+<meta name="description" content="Demo aplikasi Jalan Cita: peta kebutuhan, rencana masa depan, dan tindak lanjut pendampingan anak. Semua data adalah contoh.">
+<meta name="theme-color" content="#F4EEE3">
+<meta name="robots" content="noindex">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/favicon.svg">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Demo Dashboard — Aplikasi Jalan Cita">
+<meta property="og:description" content="Prototipe aplikasi pendampingan pendidikan anak dengan data contoh.">
+<meta property="og:image" content="/assets/og-image.png">
+<meta property="og:locale" content="id_ID">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,600&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="dash-body">
+
+<a class="skip-link" href="#dash-main">Lewati ke konten utama</a>
+
+<div class="top-banner">
+  <div class="top-banner__inner">
+    <span class="top-banner__dot" aria-hidden="true"></span>
+    <p style="margin:0"><strong>Mode demo</strong> &mdash; semua data adalah contoh, bukan data anak sebenarnya.</p>
+  </div>
+</div>
+
+<header class="nav">
+  <div class="nav__inner" style="max-width:1280px">
+    <a class="brand" href="/" aria-label="Jalan Cita — kembali ke halaman utama">
+      <svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true">
+        <path d="M9 28C16 23 10 14 16 9c5-4 8 2 1 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-dasharray="1 5"/>
+        <circle cx="9" cy="28" r="3" fill="#C0532F"/>
+      </svg>
+      Jalan Cita
+    </a>
+    <nav class="nav__links nav__links--keep" aria-label="Navigasi tambahan" style="margin-left:auto">
+      <a href="/" aria-label="Kembali ke halaman utama">Halaman utama</a>
+    </nav>
+  </div>
+</header>
+
+<div class="dash" id="dash-main">
+
+  <div class="dash__head">
+    <div>
+      <h1 class="dash__title">Aplikasi <span>Jalan Cita</span></h1>
+      <p class="dash__sub">Buku catatan lapangan untuk pengelola desa dan Kakak Pendamping. Semua kode anak bersifat anonim.</p>
+    </div>
+    <p class="dash__sub" id="dash-updated" style="margin:0"></p>
+  </div>
+
+  <h2 class="visually-hidden">Navigasi dashboard</h2>
+  <ul class="dash__nav" role="tablist" aria-label="Bagian dashboard">
+    <li role="presentation">
+      <button role="tab" id="tab-beranda" aria-controls="panel-beranda" aria-selected="true" tabindex="0">
+        <span class="tab-n">01</span> Beranda
+      </button>
+    </li>
+    <li role="presentation">
+      <button role="tab" id="tab-peta" aria-controls="panel-peta" aria-selected="false" tabindex="-1">
+        <span class="tab-n">02</span> Peta Kebutuhan
+      </button>
+    </li>
+    <li role="presentation">
+      <button role="tab" id="tab-rencana" aria-controls="panel-rencana" aria-selected="false" tabindex="-1">
+        <span class="tab-n">03</span> Rencana Masa Depan
+      </button>
+    </li>
+    <li role="presentation">
+      <button role="tab" id="tab-tindak" aria-controls="panel-tindak" aria-selected="false" tabindex="-1">
+        <span class="tab-n">04</span> Tindak Lanjut
+      </button>
+    </li>
+  </ul>
+
+  <section class="dash__panel" id="panel-beranda" role="tabpanel" aria-labelledby="tab-beranda" tabindex="0">
+    <div class="panel-head">
+      <h2>Beranda</h2>
+      <p>Ringkasan singkat dari Peta Anak yang terakhir diperbarui pengelola desa.</p>
+    </div>
+    <div id="beranda-mount"></div>
+  </section>
+
+  <section class="dash__panel" id="panel-peta" role="tabpanel" aria-labelledby="tab-peta" tabindex="0" hidden>
+    <div class="panel-head">
+      <h2>Peta Kebutuhan</h2>
+      <p>Hanya kode anonim. Nama dan identitas anak tidak ditampilkan di halaman ini.</p>
+    </div>
+    <div class="filters">
+      <div class="field">
+        <label for="filter-risiko">Risiko</label>
+        <select id="filter-risiko">
+          <option value="semua">Semua risiko</option>
+          <option value="tinggi">Tinggi</option>
+          <option value="sedang">Sedang</option>
+          <option value="rendah">Rendah</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="filter-status">Status pendampingan</label>
+        <select id="filter-status">
+          <option value="semua">Semua status</option>
+          <option value="Aktif">Aktif</option>
+          <option value="Terjadwal">Terjadwal</option>
+          <option value="Belum didampingi">Belum didampingi</option>
+          <option value="Selesai">Selesai</option>
+        </select>
+      </div>
+      <p class="filters__count" id="peta-count" role="status"></p>
+    </div>
+    <div id="peta-mount"></div>
+  </section>
+
+  <section class="dash__panel" id="panel-rencana" role="tabpanel" aria-labelledby="tab-rencana" tabindex="0" hidden>
+    <div class="panel-head">
+      <h2>Rencana Masa Depan</h2>
+      <p>Pilih satu anak untuk melihat Rencana Pasca-Lulusnya. Centang langkah yang sudah selesai.</p>
+    </div>
+    <div id="rencana-mount"></div>
+  </section>
+
+  <section class="dash__panel" id="panel-tindak" role="tabpanel" aria-labelledby="tab-tindak" tabindex="0" hidden>
+    <div class="panel-head">
+      <h2>Tindak Lanjut</h2>
+      <p>Catatan kemajuan, jadwal evaluasi berikutnya, dan kebutuhan bantuan yang belum terselesaikan.</p>
+    </div>
+    <div id="tindak-mount"></div>
+  </section>
+
+</div>
+
+<script src="/js/data.js" defer></script>
+<script src="/js/dashboard.js" defer></script>
+</body>
+</html>
